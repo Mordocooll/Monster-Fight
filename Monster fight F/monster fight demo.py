@@ -11,7 +11,7 @@ bg_image = tk.PhotoImage(file="Monster_Fight_GUI.png")
 bg_label = tkinter.Label(root, image=bg_image)
 bg_label.pack(expand=True, fill=tk.BOTH)
 
-# Monster images and names and rage threshhold (rage is just monster getting stronger)
+# Monster images and names and rage threshhold (rage is just monster getting stronger after a certain damage is dealt)
 monsters = [
     {"name": "Goblin", "image": "goblin.png", "rage_threshold": 40},
     {"name": "Skeleton", "image": "skeleton.png", "rage_threshold": 50},
@@ -23,15 +23,15 @@ monsters = [
 monster_choice = random.choice(monsters)
 m_name = monster_choice["name"]
 monster_image = tk.PhotoImage(file=monster_choice["image"])
-monster_image_resized = monster_image.subsample(2)  # Resize to 50% of original size
+monster_image_resized = monster_image.subsample(2)
 monster_label = tkinter.Label(root, image=monster_image_resized, bg='#fafbf8')
 monster_label.place(x=750, y=120)
 
 # Resizing player image
 original_player_image = tk.PhotoImage(file="knight.png")
-player_image = original_player_image.subsample(2)  # Resize to 50% of the original size
+player_image = original_player_image.subsample(2) 
 player_label = tkinter.Label(root, image=player_image, bg='#fafbf8')
-player_label.place(x=100, y=320)
+player_label.place(x=100, y=450)
 
 # Player and monster stats
 p_name = "Albert"
