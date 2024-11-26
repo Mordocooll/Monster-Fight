@@ -13,10 +13,10 @@ bg_label.pack(expand=True, fill=tk.BOTH)
 
 # Monster images and names and rage threshhold (rage is just monster getting stronger after a certain damage is dealt)
 monsters = [
-    {"name": "Goblin", "image": "goblin.png", "rage_threshold": 40},
-    {"name": "Skeleton", "image": "skeleton.png", "rage_threshold": 50},
-    {"name": "Zombie", "image": "zombie.png", "rage_threshold": 60},
-    {"name": "Dragon", "image": "dragon.png", "rage_threshold": 70}
+    {"name": "Goblin", "image": "goblin.png", "rage_threshold": 40, "health": 80},
+    {"name": "Skeleton", "image": "skeleton.png", "rage_threshold": 50, "health": 100},
+    {"name": "Zombie", "image": "zombie.png", "rage_threshold": 60, "health": 130},
+    {"name": "Dragon", "image": "dragon.png", "rage_threshold": 70, "health": 160}
 ]
 
 # Randomly select a monster
@@ -38,7 +38,7 @@ p_name = "Albert"
 p_health = 100
 p_attack_dmg = random.randint(5, 12)
 
-m_health = 100
+m_health = monster_choice["health"]
 m_rage = 0  # Monster rage level
 m_attack_dmg = random.randint(10, 13)
 
