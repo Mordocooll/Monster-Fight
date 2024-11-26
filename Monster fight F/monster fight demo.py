@@ -114,7 +114,7 @@ def p_heal():
         player_health_lbl.config(text=f"{p_health}")
         action_label.config(text=f"You consumed a healing potion\n and gained {p_heal_amt} health!")
     else:
-        action_label.config(text="You can only heal once every 4 turns!")
+        action_label.config(text="You can only heal once\n every 4 turns!")
 # Player parrys
 def p_parry():
     global p_health, m_health, turn, m_attack_dmg
