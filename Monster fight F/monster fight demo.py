@@ -21,10 +21,21 @@ def start_game():
 
 # Monster images and names and rage threshold
     monsters = [
+        # Tier 1
         {"name": "Goblin", "image": "goblin.png", "rage_threshold": 40, "health": 80},
-        {"name": "Skeleton", "image": "skeleton.png", "rage_threshold": 50, "health": 90},
-        {"name": "Zombie", "image": "zombie.png", "rage_threshold": 60, "health": 100},
-        {"name": "Dragon", "image": "dragon.png", "rage_threshold": 80, "health": 130}
+        {"name": "Mummy", "image": "mummy.png", "rage_threshold": 40, "health": 80},
+        {"name": "Wolf", "image": "wolf.png", "rage_threshold": 40, "health": 80},
+        {"name": "Skeleton", "image": "skeleton.png", "rage_threshold": 40, "health": 80},
+        {"name": "Zombie", "image": "zombie.png", "rage_threshold": 40, "health": 80},
+
+        # Tier 2
+        {"name": "Vampire", "image": "vampire.png", "rage_threshold": 60, "health": 90},
+        {"name": "Wendigo", "image": "wendigo.png", "rage_threshold": 60, "health": 90},
+        {"name": "Dullhan", "image": "dullhan.png", "rage_threshold": 60, "health": 90},
+
+        #Tier 3
+        {"name": "Dragon", "image": "dragon.png", "rage_threshold": 80, "health": 110}
+
     ]
 
 # Randomly select a monster
@@ -223,7 +234,7 @@ root.geometry("1250x1150")
 def start_screen():
     bg_image_start = PhotoImage(file="Forest.png")
     bg_label_start = Label(root, image=bg_image_start)
-    bg_label_start.image = bg_image_start  # Keep a reference
+    bg_label_start.image = bg_image_start  
     bg_label_start.pack(expand=True, fill=BOTH)
 
     start_fight_lbl = Label(root, text="You hear a crinkle behind a tree", font=("", 30), bg = '#a2cad3')
